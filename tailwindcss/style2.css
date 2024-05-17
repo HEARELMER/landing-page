@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+}
+
+.cards .card{
+    @apply rounded-lg shadow-lg w-72 bg-white flex flex-col  items-center ;
+    img{
+        @apply h-72 w-full rounded-t-lg object-cover;
+    };
+    button{
+        @apply rounded-full bg-orange-400 hover:bg-orange-500 duration-300 ease-in-out font-semibold px-4 py-3 text-white my-4;
+    }
+}
+.group-info{
+    @apply grid grid-cols-2 gap-4 justify-center grid-rows-2 px-3 py-4;
+    .stars{
+        @apply flex items-center justify-end;
+        svg{
+            @apply w-6 h-6;
+        }
+    }
+    h1{
+        @apply text-xl font-bold;
+    }
+    h2{
+        @apply text-lg font-semibold text-end;
+    }
+}
+
+.cards-favorite .card{
+    @apply rounded-lg shadow-lg w-72 bg-white flex flex-col  items-center  gap-3;
+   h1{
+         @apply text-lg font-bold;
+    
+   }
+   p{
+        @apply text-sm font-medium;
+   
+   }
+}
+.icon{
+    @apply p-6 bg-orange-300 rounded-full;
+}
+/* Estilos adicionales para dispositivos móviles */
+@media (max-width: 767px) {
+  .menu.active{
+    display: block;
+    @apply absolute right-0 top-0  w-[60%] h-full shadow-lg
+     bg-orange-400 font-semibold text-white text-xl p-6 gap-6;
+  }
+  .group-btn.menu.active{
+    display: block;
+    @apply absolute z-50 top-6;
+  }
+}
