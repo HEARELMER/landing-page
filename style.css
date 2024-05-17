@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+}
+
+.menu.active{
+    ul{
+        @apply flex flex-col gap-4;
+    }
+    @apply absolute top-20 flex flex-col bg-white w-full z-[100] left-0 py-10 h-full;
+}
